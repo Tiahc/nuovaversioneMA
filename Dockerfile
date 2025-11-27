@@ -9,6 +9,8 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/Tiahc/nuovaversioneMA.git .
 
+COPY config.json /app/config.json
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN pip install --no-cache-dir pytesseract
