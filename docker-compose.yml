@@ -1,24 +1,6 @@
 version: '3.8'
 
 services:
-  npm:
-    image: jc21/nginx-proxy-manager:latest
-    container_name: nginx-proxy-manager
-    restart: unless-stopped
-    ports:
-      - "8081:80"     # HTTP
-      - "443:443"    # HTTPS
-      - "8181:81"     # NPM Admin UI
-      - "8001:8001"
-      - "8002:8002"
-      - "8003:8003"
-    environment:
-      DB_SQLITE_FILE: "/data/database.sqlite"
-    volumes:
-      - npm-data:/data
-      - npm-letsencrypt:/etc/letsencrypt
-    networks:
-      - proxy
   mammamia:
     build: https://github.com/Tiahc/nuovaversioneMA
     container_name: mammamia
@@ -27,10 +9,6 @@ services:
     restart: unless-stopped
     networks:
       - proxy
-
-volumes:
-  npm-data:
-  npm-letsencrypt:
 
 networks:
   proxy:
