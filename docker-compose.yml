@@ -9,3 +9,7 @@ services:
     restart: unless-stopped
     networks:
       - proxy
+
+networks:
+  proxy:
+    external: true
