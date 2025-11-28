@@ -13,7 +13,6 @@ RUN apt-get update && \
 # Clone the repository
 RUN git clone --branch main https://github.com/Tiahc/nuovaversioneMA .
 
-ADD https://raw.githubusercontent.com/nihon77/stremio-selfhosted/refs/heads/main/mammamia/update_domains.py update_domains.py
 # ADD update_domains.py update_domains.py
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
