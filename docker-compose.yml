@@ -2,14 +2,10 @@ version: '3.8'
 
 services:
   mammamia:
-    build: ./nuovaversioneMA
+    build: .
     container_name: mammamia
     env_file:
       - ./.env
     restart: unless-stopped
     networks:
       - proxy
-
-networks:
-  proxy:
-    external: true
