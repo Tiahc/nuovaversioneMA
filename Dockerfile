@@ -23,4 +23,4 @@ EXPOSE 8080
 
 # Run run.py when the container launches
 #CMD ["python", "run.py"]
-CMD python update_domains.py && python run.py
+#CMD python update_domains.py && python run.py
