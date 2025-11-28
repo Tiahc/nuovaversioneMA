@@ -11,7 +11,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the repository
-RUN git clone --branch main https://github.com/Tiahc/nuovaversioneMA .
+# RUN git clone --branch main https://github.com/Tiahc/nuovaversioneMA .
 
 # ADD update_domains.py update_domains.py
 # Install any needed packages specified in requirements.txt
@@ -23,4 +23,4 @@ EXPOSE 8080
 
 # Run run.py when the container launches
 #CMD ["python", "run.py"]
-#CMD python update_domains.py && python run.py
+CMD python update_domains.py && python run.py
