@@ -19,6 +19,14 @@ services:
       - npm-letsencrypt:/etc/letsencrypt
     networks:
       - proxy
+  mammamia:
+    build: https://github.com/Tiahc/nuovaversioneMA
+    container_name: mammamia
+    env_file:
+      - ./mammamia/.env
+    restart: unless-stopped
+    networks:
+      - proxy
 
 volumes:
   npm-data:
