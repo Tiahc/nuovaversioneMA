@@ -23,7 +23,7 @@ services:
     build: https://github.com/Tiahc/nuovaversioneMA
     container_name: mammamia
     env_file:
-      - ./mammamia/.env
+      - ./.env
     restart: unless-stopped
     networks:
       - proxy
