@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mammamia:
-    build: https://github.com/Tiahc/nuovaversioneMA
+    build: ./nuovaversioneMA
     container_name: mammamia
     env_file:
       - ./.env
